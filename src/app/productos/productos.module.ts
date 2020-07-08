@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+
+import { IonicModule } from '@ionic/angular';
 import {HttpClientModule} from '@angular/common/http';
 import {ApiService} from './../api.service';
-import { HomePageRoutingModule } from './home-routing.module';
+
+import { ProductosPageRoutingModule } from './productos-routing.module';
 
 
+import { ProductosPage } from './productos.page';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     FormsModule,
     IonicModule,
-    HttpClientModule, 
-    HomePageRoutingModule,
-
+    ProductosPageRoutingModule
   ],
-  declarations: [HomePage],
+  declarations: [ProductosPage], 
   providers: [ApiService],
 })
-export class HomePageModule {}
+export class ProductosPageModule {}

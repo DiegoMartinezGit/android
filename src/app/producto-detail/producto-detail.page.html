@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons  slot="end" >
+      <ion-button [routerLink]='["/carrito"]'>
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons >
+    <ion-buttons slot="start"  [routerLink]='["/home"]'>
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title id="ion-title">Bienvenido a la tienda UwU </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-row>
+      <ion-col style="text-align: end;font-size: 25px;">
+        <ion-title>Producto Seleccionado</ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-title>$ {{precio}}</ion-title>
+      </ion-col>
+      
+      
+    </ion-row>
+    
+  </ion-toolbar>  
+  <ion-card *ngFor="let prod of producto">
+    <ion-img src="{{prod.ruta}}"></ion-img>
+
+    <ion-card-header>
+      <ion-card-title id="ion-title">{{prod.name}}</ion-card-title>
+      <ion-card-subtitle>{{prod.desc}}</ion-card-subtitle>  
+      
+    </ion-card-header>
+  </ion-card>
+  <ion-item>
+    <ion-label id="ion-title">Cantidad</ion-label>
+    <ion-input type="number" value="{{cantidad}}" id="ion-title"></ion-input>
+    <ion-button (click)="restaruno()"><ion-icon name="remove-outline"></ion-icon></ion-button>
+    <ion-button (click)="sumaruno()"><ion-icon name="add-outline" ></ion-icon></ion-button>
+  </ion-item>
+  <ion-button size ="large"expand="block" (click)="agregar()" [routerLink]='["/carrito"]'>AGREGAR &nbsp;<ion-icon name="cart-outline"></ion-icon></ion-button>
+  
+  
+  
+</ion-content>

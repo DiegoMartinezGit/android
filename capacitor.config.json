@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "cl.dmartinez.tienda",
   "appName": "tienda",
   "bundledWebRuntime": false,
   "npmClient": "npm",

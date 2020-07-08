@@ -2,27 +2,26 @@
   <ion-toolbar color="primary">
     <ion-buttons  slot="end" >
       <ion-button [routerLink]='["/carrito"]'>
-        <ion-icon name="cart-outline" ></ion-icon>
+        <ion-icon name="cart-outline"></ion-icon>
       </ion-button>
     </ion-buttons >
-    <ion-buttons slot="start"[routerLink]='["/home"]'>
+    <ion-buttons slot="start" [routerLink]='["/home"]'>
       <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
 
-    <ion-title id="ion-title">Bienvenido a la Tienda UwU </ion-title>
+    <ion-title id="ion-title">Bienvenido a la tienda UwU </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-toolbar>
-    <ion-title>Categorias</ion-title>
+    <ion-title>Productos</ion-title>
   </ion-toolbar>  
-  <ion-card  *ngFor="let cat of categorias" [routerLink]='["/productos",cat._id]'>
-    <ion-img src="{{cat.ruta}}"></ion-img>
-    
+  <ion-card *ngFor="let prod of productos"  [routerLink]='["/producto-detail",prod._id]'>
+    <ion-img src="{{prod.ruta}}"></ion-img>
     <ion-card-header>
-      <ion-card-subtitle id="ion-title">{{cat.name}}</ion-card-subtitle>
-      <ion-card-title></ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>{{prod.name}}</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>

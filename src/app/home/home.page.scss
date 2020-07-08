@@ -25,3 +25,20 @@
 #container a {
   text-decoration: none;
 }
+.my-custom-menu {
+  --width: 500px;
+}
+#ion-title{
+  font-size: 23px;
+  
+  text-align: center;
+  
+
+}
+@font-face{
+  font-family: Slabo;
+  src : url('../../assets/fonts/yellowtail.woff2')
+}
+*{
+  font-family: Slabo;
+}
